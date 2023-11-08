@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Stock Trend Prediction Result</title>
+</head>
+<style>
+	/* Apply styles to the entire body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the container div */
+.container {
+  background-color: #F5F5F5;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the headers */
+h1 {
+  text-decoration: underline;
+  text-align: center;
+  color: #333;
+}
+
+h3 {
+  color: #555;
+}
+
+/* Style the table */
+table {
+	text-align: center;
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style the prediction image */
+img {
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+  margin: 10px auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+</style>
+
+<body>
+	<div class="container">
+		<h1><u>Stock Trend Prediction Result</u></h1>
+
+		<h3>Company name: {{ company }}</h3>
+		<!-- <h3>Start date: {{ start_date }}</h3>
+		<h3>End date: {{ end_date }}</h3> -->
+		<h3>Describing dataset:</h3>
+		<table>
+			{% for table in tables %} {{table|safe}} {% endfor %}
+		</table>
+		<h3>Predicted result for {{ forcast_out }} days</h3>
+
+		<h3>Final Prediction Graph:</h3>
+		<img src="data:image/png;base64,{{ plot_data }}" alt="Graph Plot" />
+	</div>
+</body>
+
+</html>

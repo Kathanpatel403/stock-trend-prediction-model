@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Trend Prediction</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+form {
+  max-width: 350px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(30, 11, 11, 0);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="text"]{
+  width: 100%;
+  padding: 10px;;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;   
+}
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.reset{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.link{
+    font-size: 20px;
+    margin-top: 22px;
+}
+
+  </style>
+</head>
+
+<body>
+  <h1>Stock Trend Prediction</h1>
+
+  <form action="/predict" method="post">
+    <h3><a href="https://finance.yahoo.com/" class="link" target="_blank">Find stock tickers from here</a></h3>
+    
+    <label for="company" style="margin-top: 20px;">Stock ticker:</label>
+    <input type="text" id="company" name="company" required><br><br>
+
+    <label for="start">Start date:</label>
+    <input type="date" id="start" name="start" required><br><br>
+
+    <label for="end">End date:</label>
+    <input type="date" id="end" name="end" required><br><br>
+
+    <input type="submit" value="Predict Trend">
+    <button type="reset"class="reset">Reset Details</button>
+  </form>
+</body>
+</html>
