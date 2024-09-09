@@ -3,7 +3,7 @@ WORKDIR /code
 
 COPY . .
 RUN pip install --no-cache-dir --upgrade pip setuptools
-RUN pip install flask numpy pandas matplotlib scikit-learn yahoo_fin requests_html
+RUN pip install -r requirements.txt
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 EXPOSE 5000

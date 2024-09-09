@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: kathanpatel403/stock-trend-prediction-flask-app:latest  # Replace with your Docker Hub image name
+        image: kathanpatel403/stock-trend-prediction-flask-app:02  # Replace with your Docker Hub image name
         ports:
         - containerPort: 5000
         
