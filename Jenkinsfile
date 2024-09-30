@@ -96,7 +96,6 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 echo 'Deploying to Kubernetes...'
-                // Ensure you have `kubectl` configured on your Jenkins machine
                 sh 'kubectl apply -f deployment.yaml'
                 echo 'Deployment applied to Kubernetes!'
             }
