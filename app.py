@@ -5,8 +5,6 @@ from yahoo_fin.stock_info import get_data
 import matplotlib.pyplot as plt
 import math, datetime
 from sklearn import preprocessing
-from sklearn.model_selection import train_test_split
-import pandas as pd
 import numpy as np
 import joblib
 
