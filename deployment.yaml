@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: kathanpatel403/stock-trend-prediction-flask-app:02  # Replace with your Docker Hub image name
+        image: kathanpatel403/stock-trend-prediction-flask-app:latest
         ports:
         - containerPort: 5000
 
@@ -27,10 +27,10 @@ kind: Service
 metadata:
   name: flask-app-service
 spec:
-  type: LoadBalancer  # Use 'NodePort' if running on a local cluster like minikube
+  type: LoadBalancer 
   selector:
     app: flask-app
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 5000  # Port on which Flask is running inside the container
+      targetPort: 5000 
