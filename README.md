@@ -5,7 +5,7 @@
 This project focuses on building and deploying a web application that predicts stock price trends using a machine learning model. The application combines data science, web development, containerization, and cloud deployment, resulting in a scalable and automated stock prediction system.
 
 ## Project Highlights
-- ** Model development:** Trained model on XGBoost algorithm to capture complex patterns form data and saved the model for later uses.
+- **Model development:** Trained model on XGBoost algorithm to capture complex patterns form data and saved the model for later uses.
 - **Backend Integration:** Utilized Flask to power the backend, handling user requests, processing data, and predicting stock trends, with an HTML frontend for user interaction.
 - **Containerization:** Dockerized the entire project, enabling seamless deployment across environments. The Docker image was pushed to Docker Hub for easy access.
 - **AWS Deployment:** Deployed the project on AWS EC2 with Kubernetes for scalable and efficient hosting.
